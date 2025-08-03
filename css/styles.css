@@ -505,7 +505,8 @@ p {
   max-width: 264px;
 }
 
-.ftr-p-social {
+.ftr-p-social,
+.ftr-subscribe-p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -553,20 +554,21 @@ p {
   display: flex;
 }
 
-.ftr-subscribe-form .buttons {
-  border-radius: 4px;
-  padding: 8px 24px;
-  width: 165px;
-  height: 40px;
-  margin-left: 24px;
-}
-
-.ftr-subscribe-form .buttons a {
+.ftr-subscribe-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
   text-align: center;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  margin-left: 24px;
+  background-color: var(--iris);
   color: var(--white);
 }
 
@@ -578,19 +580,7 @@ p {
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   color: var(--cloud);
-}
-
-.ftr-subscribe-input {
   padding-left: 16px;
-}
-
-.ftr-subscribe-p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: var(--white);
-  margin-bottom: 16px;
 }
 
 .modal-overlay {
@@ -670,11 +660,19 @@ p {
 }
 
 .callback-label {
+  position: relative;
   font-weight: 400;
   font-size: 12px;
   line-height: 117%;
   letter-spacing: 0.04em;
   color: var(--light-slate);
+}
+
+.callback-icon {
+  position: absolute;
+  top: 28px;
+  left: 16px;
+  z-index: 100;
 }
 
 .callback-input {
@@ -684,6 +682,7 @@ p {
   border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
   margin-top: 4px;
+  padding-left: 38px;
 }
 
 .callback-label-checkbox {
