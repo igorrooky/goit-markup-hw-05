@@ -552,6 +552,7 @@ p {
 
 .ftr-subscribe-form {
   display: flex;
+  gap: 24px;
 }
 
 .ftr-subscribe-button {
@@ -564,10 +565,9 @@ p {
   letter-spacing: 0.04em;
   text-align: center;
   border-radius: 4px;
-  padding: 8px 24px;
+  padding: 8px;
   min-width: 165px;
   height: 40px;
-  margin-left: 24px;
   background-color: var(--iris);
   color: var(--white);
   cursor: pointer;
