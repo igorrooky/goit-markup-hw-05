@@ -639,7 +639,6 @@ p {
 }
 
 .callback-form {
-  margin-top: 72px;
   padding: 0 24px;
 }
 
@@ -675,6 +674,25 @@ p {
   top: 28px;
   left: 16px;
   z-index: 100;
+}
+
+.callback-close-box {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin: 24px;
+}
+
+.callback-icon-close {
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-right: 24px;
+}
+
+.callback-icon-close:hover {
+  fill: var(--white);
+  background-color: var(--ocean);
 }
 
 .callback-input {
@@ -714,9 +732,10 @@ p {
 }
 
 .callback-icon:focus-within,
+.callback-icon:hover,
 .callback-label:hover {
   fill: var(--iris);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .callback-textarea:focus,
 .callback-textarea:hover,
