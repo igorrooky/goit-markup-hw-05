@@ -597,7 +597,7 @@ p {
 }
 
 .modal-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -614,18 +614,21 @@ p {
 }
 
 .modal {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
+  min-height: 584px;
   background-color: var(--dairy);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   z-index: 1001;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   color: var(--light-slate);
+  padding: 72px 24px 24px 24px;
 }
 
 .modal fieldset {
@@ -642,7 +645,7 @@ p {
 .callback-legend {
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--navy-blue);
@@ -690,22 +693,30 @@ p {
 }
 
 .callback-close-box {
-  display: flex;
-  justify-content: end;
-  width: 100%;
-  margin: 24px;
 }
 
-.callback-icon-close {
+.callback-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  margin-right: 24px;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.callback-icon-close:hover {
+.callback-close-button:hover {
   fill: var(--white);
   background-color: var(--ocean);
+  border: none;
 }
 
 .callback-input {
