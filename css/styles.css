@@ -714,7 +714,8 @@ p {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.callback-close-button:hover {
+.callback-close-button:hover,
+.callback-close-button:focus {
   fill: var(--white);
   background-color: var(--ocean);
   border: none;
