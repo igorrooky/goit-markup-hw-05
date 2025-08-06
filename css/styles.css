@@ -597,7 +597,7 @@ p {
 }
 
 .modal-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -606,6 +606,8 @@ p {
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay.is-open {
   opacity: 1;
@@ -638,7 +640,6 @@ p {
 }
 
 .callback-buttons {
-  margin-bottom: 24px;
   margin-top: 24px;
 }
 
@@ -676,8 +677,11 @@ p {
   padding-left: 16px;
 }
 
-.callback-label {
+.callback-input-box {
   position: relative;
+}
+
+.callback-label {
   font-weight: 400;
   font-size: 12px;
   line-height: 117%;
@@ -687,12 +691,10 @@ p {
 
 .callback-icon {
   position: absolute;
-  top: 28px;
   left: 16px;
+  top: 12px;
   z-index: 100;
-}
-
-.callback-close-box {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .callback-close-button {
@@ -748,18 +750,19 @@ p {
   margin-right: 8px;
 }
 
-.callback-label:focus-within,
+.callback-input-box:focus-within,
 .callback-textarea:focus-within,
-.callback-label:hover {
+.callback-input-box:hover {
   color: var(--iris);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .callback-icon:focus-within,
 .callback-icon:hover,
-.callback-label:hover {
+.callback-input-box:hover {
   fill: var(--iris);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .callback-textarea:focus,
 .callback-textarea:hover,
