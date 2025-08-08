@@ -739,20 +739,40 @@ p {
 }
 
 .callback-label-checkbox {
-  font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--light-slate);
 }
 
-.callback-label-box a {
+.callback-privacy-link {
   text-decoration: underline;
   color: var(--iris);
 }
 
-.callback-checkbox {
+.callback-custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  border-radius: 2px;
+  border: 1px solid var(--navy-blue-modal);
+  width: 16px;
+  height: 16px;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.callback-checkbox:checked
+  + .callback-label-checkbox
+  .callback-custom-checkbox {
+  background-color: var(--iris);
+  fill: var(--cloud);
+}
+
+.callback-checkbox {
 }
 
 .callback-input-box:focus-within,

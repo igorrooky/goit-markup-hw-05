@@ -482,7 +482,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay.is-open">
+    <div class="modal-overlay">
       <div class="modal">
         <button type="button" class="callback-close-button">
           <svg class="callback-icon-close" width="8" height="8">
@@ -545,15 +545,21 @@
             ></textarea>
           </div>
           <div class="callback-label-box">
-            <label class="callback-label-checkbox">
-              <input
-                class="callback-checkbox"
-                type="checkbox"
-                name="policy"
-                value="privacy-policy"
-              />
+            <input
+              class="callback-checkbox visually-hidden"
+              type="checkbox"
+              name="policy"
+              value="privacy-policy"
+              id="user-checkbox"
+            />
+            <label class="callback-label-checkbox" for="user-checkbox">
+              <span class="callback-custom-checkbox">
+                <svg class="callback-checkbox" width="10" height="8">
+                  <use href="./images/icons.svg#checkbox"></use>
+                </svg>
+              </span>
               I accept the terms and conditions of the
-              <a href="">Privacy Policy</a>
+              <a class="callback-privacy-link" href="">Privacy Policy</a>
             </label>
           </div>
           <button type="submit" class="buttons callback-buttons">Send</button>
