@@ -674,6 +674,10 @@ p {
 }
 
 .callback-input-box {
+  margin-bottom: 8px;
+}
+
+.callback-label-box {
   position: relative;
 }
 
