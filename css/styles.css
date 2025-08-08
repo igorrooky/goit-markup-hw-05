@@ -654,10 +654,6 @@ p {
   width: 100%;
 }
 
-.callback-form {
-  gap: 24px;
-}
-
 .callback-textarea {
   display: flex;
   align-items: center;
