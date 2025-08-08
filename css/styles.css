@@ -791,6 +791,7 @@ p {
 .callback-input-box:hover {
   color: var(--iris);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--iris);
 }
 
 .callback-icon:focus-within,
@@ -809,7 +810,7 @@ p {
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-color: var(--iris);
-  fill: var(--iris);
+  fill: var(--white);
 }
 
 .callback-input:focus-visible,
